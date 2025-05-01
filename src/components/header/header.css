@@ -6,6 +6,14 @@
         width: 100%;
         padding: 30px;
 
+        background-color: white;
+
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1;
+
         font-family: "Kosugi", sans-serif;
 
         font-style: normal;
