@@ -2,11 +2,11 @@ import React from 'react'
 import "./header.css"
 import { Link } from 'react-router-dom'
 
-function Header() {
+function Header({links}) {
   return (
     <header className='header'>
         <div className="logo">
-            <a href='#'>Africa Preserve</a>
+            <a href='/'>Africa Preserve</a>
         </div>
 
         <nav className='navHeader'>
