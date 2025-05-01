@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kosugi&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* >>>>> HEADER <<<<< */
+    .header{
+        height: 100px;
+        width: 100%;
+        padding: 30px;
+
+        font-family: "Kosugi", sans-serif;
+
+        font-style: normal;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.308);
+    }
+
+    .header a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .logo a{
+        font-size: 2rem;
+        font-weight: 800;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1700px) {
+        .header{
+            height: 80px;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .logo a{
+            font-size: 1.5rem;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .header{
+            padding: 15px;
+        }
+
+        .logo a{
+            font-size: 1.2rem;
+        }
+    }
+/*  */
+
+
+/* >>>>> HEADER NAVIGATION <<<<< */
+    .navHeader{
+        font-size: 1.3rem;
+        font-weight: 400;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 700px) {
+        .navHeader{
+            font-size: 1rem;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .navHeader{
+            font-size: 0.8rem;
+
+            gap: 1rem;
+        }
+    }
+/*  */
