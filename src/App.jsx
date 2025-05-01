@@ -5,7 +5,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 function App() {
   const router = createBrowserRouter([
     {
-      path: "/"
+      path: "/",
+      element: <h2>Money</h2>
     },
   ])
 
