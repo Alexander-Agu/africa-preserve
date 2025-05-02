@@ -19,7 +19,7 @@ function HomeHero() {
 
             <div className="homeHeroNav">
                 <a href="#" className='toSignIn'>Explore Stories</a>
-                <a href="#" className='toCreate'>Share Your Story</a>
+                <a href="/submit" className='toCreate'>Share Your Story</a>
             </div>
         </article>
 

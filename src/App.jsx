@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Home from './pages/Home'
+import Home from './pages/home/Home'
+import Submit from './pages/submit/Submit'
 
 function App() {
   const router = createBrowserRouter([
@@ -9,6 +10,10 @@ function App() {
       path: "/",
       element: <Home />
     },
+    {
+      path: "/submit",
+      element: <Submit />
+    }
   ])
 
   return (
