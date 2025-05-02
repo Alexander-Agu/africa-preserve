@@ -18,7 +18,7 @@ function HomeHero() {
             </p>
 
             <div className="homeHeroNav">
-                <a href="#" className='toSignIn'>Explore Stories</a>
+                <a href="/feed" className='toSignIn'>Explore Stories</a>
                 <a href="/submit" className='toCreate'>Share Your Story</a>
             </div>
         </article>
