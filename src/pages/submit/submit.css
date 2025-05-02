@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+
+/* >>>>> SUBMIT CONTAINER <<<<< */
+    .submitApp{
+        width: 100%;
+        padding: 60px;   
+        
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .submitIntro{
+        font-size: 3rem;
+        font-weight: 800;
+    }
+
+    .submit1stText{
+        text-align: center;
+        font-size: 1.5rem;
+
+        width: 50%;
+        padding: 30px;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1300px) {
+        .submit1stText{
+            font-size: 1rem;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .submit1stText{
+            width: 80%;
+            font-size: 1rem;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .submitApp{
+            padding: 20px;
+        }
+        .submitIntro{
+            font-size: 2rem;
+        }
+        .submit1stText{
+            width: 100%;
+            font-size: 0.8rem;
+            padding: 10px;
+        }
+    }
+/*  */
+
+/* >>>>> SUBMIT FORM <<<<< */
+    .submitForm{
+        width: 90%;
+
+        border: 1px solid black;
+
+        display: grid;
+        place-content: center;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 600px) {
+        .submitForm{
+            width: 100%;
+        }
+    }
+/*  */
+
+
+/* >>>>> FORM DETAILS <<<<< */
+    .formDetails{
+        width: 100%;
+        padding: 60px;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        place-content: center;
+        place-items: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 700px) {
+        .formDetails{
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .formDetails{
+            padding: 30px;
+        }
+    }
+/*  */
+
+
+/* >>>>> STORY CONTAINER <<<<< */
+    .storyContainer{
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .storyContainer textarea{
+        height: 200px;
+        padding: 30px;
+
+        font-size: 1rem;
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 410px) {
+        .storyContainer textarea{
+            font-size: 0.8rem;
+        }
+    }
+/*  */
+
+
+/* >>>>> IMPORTANT MESSAGE CONTAINER <<<<< */
+    .userMessage{
+
+        padding: 30px;
+        margin: 30px;
+
+        background-color: #ECECEC;
+        border-radius: 30px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .userMessage h2{
+        font-size: 2rem;
+    }
+
+    .userMessage p{
+        text-align: center;
+        width: 80%;
+
+        font-size: 1.5rem;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1300px) {
+        .userMessage p{
+            font-size: 1rem;
+        }
+    }
+    @media screen and (max-width: 900px) {
+        .userMessage h2{
+            font-size: 1.5rem;
+        }
+
+        .userMessage p{
+            font-size: 0.8rem;
+        }
+    }
+    @media screen and (max-width: 650px) {
+        .userMessage h2{
+            font-size: 1rem;
+        }
+
+        .userMessage p{
+            font-size: 0.6rem;
+        }
+    }
+/*  */
+
+
+/* >>>>> SUBMIT BUTTON <<<<< */
+    .submitBTN{
+        width: 92%;
+        /* margin: 30px; */
+        margin-bottom: 20px;
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    .submitBTN button{
+        width: 150px;
+        height: 70px;
+
+        border: none;
+        border-radius: 30px;
+        background-color: #D3A284;
+
+        font-size: 1.5rem;
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 900px) {
+        .submitBTN button{
+            width: 120px;
+            height: 50px;
+
+            font-size: 1rem;
+        }
+    }
+    @media screen and (max-width: 650px) {
+        .submitBTN button{
+            width: 100px;
+            height: 40px;
+
+            font-size: 0.8rem;
+        }
+    }
+/*  */
