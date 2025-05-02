@@ -1,26 +1,29 @@
 import React from 'react'
 import "./feed.css"
+import FeedPost from '../../components/feedPost/FeedPost'
+import Header from '../../components/header/Header'
 
 function Feed() {
   return <>
+  <Header />
     <main className='feedApp'>
-        <section className='leftFeed'>
-            <div className="leftContainer">
-                <h1>
-                    Preserving African culture
-                </h1>
+        <h1 className='feedAppTitle'>
+            Preserving African culture
+        </h1>
 
-                <p>
-                    Share Your Story, Preserve Our Heritage — Create a Post Today!
-                </p>
+        <p className='feedAppIntro'>
+            Share Your Story, Preserve Our Heritage — Create a Post Today!
+        </p>
 
-                <a href="#">Share Your Story</a>
-            </div>
-        </section>
-
-        <section className='rightFeed'>
-
-        </section>
+        <div className="feedContainer">
+            <FeedPost />
+            <FeedPost />
+            <FeedPost />
+            <FeedPost />
+            <FeedPost />
+            <FeedPost />
+            <FeedPost />
+        </div>
     </main>
   </>
 }

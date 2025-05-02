@@ -1,225 +1,93 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Base styles */
+:root {
+    /* Color variables */
+    --color-background: #f5f2ee;
+    --color-foreground: #3a322e;
+    --color-terracotta: #c75d3a;
+    --color-earth: #8b5a3c;
+    --color-sand: #e6d7c3;
+    --color-gold: #daa520;
+    --color-green: #5d8059;
+    --color-muted: #8a857e;
+    --color-border: #d9c9b6;
+    --color-card: #fefaf7;
+}
+
 
 /* >>>>> FEED APP <<<<< */
     .feedApp{
         width: 100%;
-        height: 100dvh;
+        min-height: 100dvh;
+        padding-top: 60px;
 
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-    /* >>> RESPONSIVE <<< */
-    @media screen and (max-width: 730px) {
-        .feedApp{
-            flex-direction: column;
-        }
-    }
-/*  */
-
-/* >>>>> LEFT FEED SECTION <<<<< */
-    .leftFeed{
-        width: 45%;
-        height: 100%;
-        
-        background-image: url("../../assets/afriPattern.jpg");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    /* >>> RESPONSIVE <<< */
-    @media screen and (max-width: 730px) {
-        .leftFeed{
-            width: 100%;
-            height: initial;
-            padding: 30px;
-        }
-    }
-/*  */
-
-
-/* >>>>> LEFT CONTAINER <<<<< */
-    .leftContainer{
-        width: 100%;
-        height: 100%;
-
-        backdrop-filter: blur(4px);
+        background-color: var(--color-background);
 
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        gap: 1rem;
+        justify-content: flex-start;
+
     }
 
-    .leftContainer h1{
-        text-align: center;
+    .feedAppTitle{
+        font-size: 4rem;
+        font-family: "Cal Sans", sans-serif;
+        font-weight: 400;
+        font-style: normal;
 
-        font-size: 8rem;
-        font-family: "League Gothic", sans-serif;
+        color: var(--color-terracotta);
+    }
+
+    .feedAppIntro{
+        color: var(--color-foreground);
+
+        font-size: 1.3rem;
+        font-family: "Roboto", sans-serif;
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
         font-variation-settings:
         "wdth" 100;
-
-        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.445);
-
-        display: inline-block;
     }
-
-    .leftContainer p,
-    .leftContainer a{
-        font-family: "Lato", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-
-        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.445);
-    }
-
-    .leftContainer p{
-        width: 60%;
-
-        text-align: center;
-        font-size: 2rem;
-    }
-
-    .leftContainer a{
-        font-size: 2rem;
-
-        text-decoration: none;
-        color: white;
-
-        height: 100px;
-        width: 350px;
-
-        background-color: #D3A284;
-        border-radius: 60px;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.445);
-
-        display: grid;
-        place-content: center;
-    }
-    
     /* >>> RESPONSIVE <<< */
-    @media screen and (max-width: 1700px) {
-        .leftContainer a{
-            width: 300px;
-            height: 70px;
+    @media screen and (max-width: 800px) {
+        .feedAppTitle{
+            font-size: 3rem;
+            text-align: center;
+        }
 
-            font-size: 1.5rem;
+        .feedAppIntro{
+            text-align: center;
         }
     }
 
-    @media screen and (max-width: 1300px) {
-        .leftContainer h1{
-            font-size: 6rem;
+    @media screen and (max-width: 800px) {
+        .feedAppTitle{
+            font-size: 3rem;
+            text-align: center;
+
+            width: 90%;
         }
 
-        .leftContainer p{
-            font-size: 1.5rem;
-        }
-
-        .leftContainer a{
-            width: 270px;
-            height: 70px;
-
-            font-size: 1.3rem;
-        }
-    }
-
-    @media screen and (max-width: 950px) {
-        .leftContainer h1{
-            font-size: 4.5rem;
-        }
-
-        .leftContainer p{
-            font-size: 1.2rem;
-        }
-
-        .leftContainer a{
-            width: 240px;
-            height: 60px;
-
-            font-size: 1rem;
-        }
-    }
-
-    @media screen and (max-width: 730px) {
-        .leftContainer{
-            border: 4px solid white;
-            padding: 30px;
-
-            backdrop-filter: blur(2px);
-        }
-    }
-
-    @media screen and (max-width: 730px) {
-        .leftContainer h1{
-            font-size: 3.5rem;
-        }
-
-        .leftContainer p{
-            font-size: 1rem;
-        }
-
-        .leftContainer a{
-            width: 200px;
-            height: 40px;
-
-            font-size: 0.8rem;
-        }
-    }
-
-    @media screen and (max-width: 520px) {
-        .leftContainer h1{
-            font-size: 2.5rem;
-        }
-
-        .leftContainer p{
-            font-size: 0.8rem;
-
-            width: 80%;
-        }
-
-        .leftContainer a{
-            width: 170px;
-            height: 40px;
-
-            font-size: 0.6rem;
-        }
-    }
-
-    @media screen and (max-width: 410px) {
-        .leftContainer h1{
-            font-size: 1.5rem;
-        }
-
-        .leftContainer p{
-            font-size: 0.6rem;
-
-            width: 80%;
-        }
-
-        .leftContainer a{
-            width: 100px;
-            height: 30px;
-
-            font-size: 0.6rem;
+        .feedAppIntro{
+            width: 90%;
         }
     }
 /*  */
 
 
-/* >>>>> RIGHT FEED SECTION <<<<< */
-    .rightFeed{
-        width: 55%;
-        height: 100%;
-
-        
+/* >>>>> FEED CONTAINER <<<<< */
+    .feedContainer{
+        margin-top: 60px;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
     }
     /* >>> RESPONSIVE <<< */
     @media screen and (max-width: 0px) {
