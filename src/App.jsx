@@ -6,6 +6,7 @@ import Submit from './pages/submit/Submit'
 import Feed from './pages/feed/Feed'
 import SignUp from './pages/signUp/SignUp'
 import SignIn from './pages/signIn/SignIn'
+import Profile from './pages/profile/Profile'
 
 function App() {
   const router = createBrowserRouter([
@@ -28,6 +29,10 @@ function App() {
     {
       path: "signin",
       element: <SignIn />
+    },
+    {
+      path: "/profile/:profileId",
+      element: <Profile />
     }
   ])
 

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import "./submit.css"
 import Header from '../../components/header/Header'
 import Input from '../../ui/input/Input';
+import { savePost } from '../../apis/postData';
 
 function Submit() {
   const [name, setName] = useState("");
@@ -37,6 +38,23 @@ function Submit() {
     },
   ];
 
+  console.log(story)
+
+  const submit = async ()=> {
+    if (title && name && location && language){
+      try{
+        let res = await savePost({
+          title: title,
+          language: language,
+          content: story,
+          region: location
+        })
+      } catch (error){
+        console.log(error)
+      }
+    }
+  }
+
   return <>
     <Header />
 
@@ -63,7 +81,7 @@ function Submit() {
         </div>
 
         <div className="storyContainer">
-          <textarea name="Alex" id="submit text Area" rows="4" cols="50" placeholder='Tell your story' style={{width: "90%"}}></textarea>
+          <textarea onChange={e => setStory(e.target.value)} name="Alex" id="submit text Area" rows="4" cols="50" placeholder='Tell your story' style={{width: "90%"}}></textarea>
         </div>
 
 
@@ -75,7 +93,7 @@ function Submit() {
         </div>
 
         <div className="submitBTN">
-          <button>
+          <button onClick={() => submit()}>
             Submit
           </button>
         </div>
