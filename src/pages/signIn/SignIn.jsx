@@ -43,6 +43,14 @@ function SignIn() {
         },
     ];
 
+    const signUp = ()=> {
+        if (name && email && location && password && confirm) {
+            window.location.href = "profile/1"; // Redirect to another page
+        } else {
+            alert("Please fill in all fields.");
+        }
+    }
+
 
   return <>
     <Header />
@@ -66,7 +74,7 @@ function SignIn() {
                     })
                 }
 
-                <button>
+                <button onClick={()=> signUp()}>
                     Sign Up
                 </button>
 

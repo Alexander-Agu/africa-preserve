@@ -1,8 +1,13 @@
 import React from 'react'
 import "./profile.css"
+import Header from '../../components/header/Header'
+import { useParams } from 'react-router-dom';
 
 function Profile() {
-  return (
+    const { profileId } = useParams();
+    console.log(profileId)
+  return <>
+    <Header />
     <main className='profileApp'>
         <section className="profileHeader">
             <h1>Hey, Alexander I. Agu</h1>
@@ -21,10 +26,37 @@ function Profile() {
 
 
         <section className='profileContainer'>
-            
+            <p>
+                Get your API Endpoint to access our library today!
+            </p>
+
+            <div className="pContainerHeader">
+                <h2>
+                    Endpoint
+                </h2>
+                <h2>
+                    Status
+                </h2>
+                <h2>
+                    Date
+                </h2>
+
+                <p>
+                    https/asdsdfertgbtrytgfeqdf.....
+                </p>
+
+                <p>
+                    Active
+                </p>
+
+                <p>
+                    04/25
+                </p>
+            </div>
+
         </section>
     </main>
-  )
+  </>
 }
 
 export default Profile

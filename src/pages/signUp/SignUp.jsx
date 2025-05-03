@@ -4,19 +4,10 @@ import Input from '../../ui/input/Input';
 import Header from '../../components/header/Header';
 
 function SignUp() {
-    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
-    const [location, setLocation] = useState("");
     const [password, setPassword] = useState("");
-    const [confirm, setConfirm] = useState("");
 
     const inputs = [
-        {
-            title: "Story teller name",
-            placeHolder: "Username",
-            setter: setName,
-            value: name
-        },
         {
             title: "Story Tile",
             placeHolder: "Email",
@@ -24,24 +15,20 @@ function SignUp() {
             value: email
         },
         {
-            title: "Specific Location",
-            placeHolder: "Country, City, Village etc..",
-            setter: setLocation,
-            value: location
-        },
-        {
             title: "Password",
             placeHolder: "Create password",
             setter: setPassword,
             value: password
         },
-        {
-            title: "Password",
-            placeHolder: "Cornfirm password",
-            setter: setConfirm,
-            value: confirm
-        },
     ];
+
+    const signIn = ()=> {
+        if (email && password) {
+            window.location.href = "profile/2";
+        } else {
+            alert("Please fill in all fields.");
+        }
+    }
 
 
 
@@ -68,7 +55,7 @@ function SignUp() {
                     })
                 }
 
-                <button>
+                <button onClick={()=> signIn()}>
                     Sign Up
                 </button>
 

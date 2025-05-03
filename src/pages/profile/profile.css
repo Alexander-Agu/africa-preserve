@@ -7,13 +7,13 @@
     .profileApp{
         width: 100%;
         height: 100dvh;
-        padding: 30px;
+        /* padding: 30px; */
 
         background-color: #F5F2EE;
 
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         justify-content: flex-start;
     }
     /* >>> RESPONSIVE <<< */
@@ -145,9 +145,65 @@
 
 
 /* >>>>> PROFILE CONTAINER <<<<< */
+    .profileContainer{
+        width: 90%;
+        padding: 60px;
 
+        background-color: #FEFAF7;
+        border-radius: 30px;
+        border: 1px solid #D9C9B6;
+    }
+
+    .profileContainer p{
+        font-size: 2rem;
+        font-family: "Antic", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .pContainerHeader{
+        width: 100%;
+        margin-top: 60px;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        justify-content: space-between;
+        place-content: center;
+        place-items: center;
+    }
+
+    .pContainerHeader h2{
+        margin-top: 30px;
+        font-family: "Anton", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .pContainerHeader p{
+        margin-top: 10px;
+        font-size: 1.5rem;
+    }
     /* >>> RESPONSIVE <<< */
-    @media screen and (max-width: 0px) {
-        
+    @media screen and (max-width: 1250px) {
+        .profileContainer p{
+            font-size: 1rem;
+        }
+
+        .pContainerHeader{
+            margin-top: 30px;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .profileContainer p{
+            font-size: 1rem;
+        }
+
+        .pContainerHeader{
+            margin-top: 30px;
+        grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
     }
 /*  */
