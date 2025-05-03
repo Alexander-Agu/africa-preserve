@@ -1,9 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./feed.css"
 import FeedPost from '../../components/feedPost/FeedPost'
 import Header from '../../components/header/Header'
+import { getPosts } from '../../apis/fetchData';
 
 function Feed() {
+  const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const res = await getPosts();
+        setData(res);
+        console.log(res)
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchPosts();
+  }, []);
+
+
   return <>
   <Header />
     <main className='feedApp'>
@@ -16,13 +38,20 @@ function Feed() {
         </p>
 
         <div className="feedContainer">
-            <FeedPost />
-            <FeedPost />
-            <FeedPost />
-            <FeedPost />
-            <FeedPost />
-            <FeedPost />
-            <FeedPost />
+          {isLoading ? (
+            <p>Loading posts...</p>
+          ) : 
+            data.map(x => {
+              const {title, region, content, created_at} = x;
+
+              return <FeedPost 
+                title={title}
+                region={created_at}
+                content={content}
+                name={region}
+              />
+            })
+          }
         </div>
     </main>
   </>

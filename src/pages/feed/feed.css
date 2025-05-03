@@ -82,6 +82,7 @@
 
 /* >>>>> FEED CONTAINER <<<<< */
     .feedContainer{
+        width: 50%;
         margin-top: 60px;
         flex-direction: column;
         display: flex;
@@ -90,7 +91,15 @@
         gap: 2rem;
     }
     /* >>> RESPONSIVE <<< */
-    @media screen and (max-width: 0px) {
-        
+    @media screen and (max-width: 1300px) {
+        .feedContainer{
+            width: 90%;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .feedContainer{
+            width: 95%;
+        }
     }
 /*  */
