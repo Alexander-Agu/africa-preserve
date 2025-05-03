@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import "./signIn.css"
 import Input from '../../ui/input/Input';
 import Header from '../../components/header/Header';
+import { saveUser } from '../../apis/postData';
 
 function SignIn() {
     const [name, setName] = useState("");
@@ -43,9 +44,21 @@ function SignIn() {
         },
     ];
 
-    const signUp = ()=> {
+    const signUp = async ()=> {
         if (name && email && location && password && confirm) {
-            window.location.href = "profile/1"; // Redirect to another page
+
+            try{
+                let id = await saveUser({
+                    username: name,
+                    email: email,
+                    password: password
+                })
+
+                window.location.href = `profile/${id.user.id}`; 
+            } catch (error){
+                console.log(error)
+            }
+            // Redirect to another page
         } else {
             alert("Please fill in all fields.");
         }
