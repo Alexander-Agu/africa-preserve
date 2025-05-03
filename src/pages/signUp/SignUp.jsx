@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import "./signUp.css"
 import Input from '../../ui/input/Input';
 import Header from '../../components/header/Header';
+import { getUser } from '../../apis/fetchData';
 
 function SignUp() {
     const [email, setEmail] = useState("");
@@ -22,9 +23,19 @@ function SignUp() {
         },
     ];
 
-    const signIn = ()=> {
+    const signIn = async ()=> {
         if (email && password) {
-            window.location.href = "profile/2";
+            try{
+                let user = await getUser({
+                    username: email,
+                    password: password
+                })
+
+                window.location.href = `profile/${user.user.id}`;
+            } catch(error){
+                console.log(error);
+            }
+
         } else {
             alert("Please fill in all fields.");
         }

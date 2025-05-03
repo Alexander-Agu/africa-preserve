@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 
 function Profile() {
     const { profileId } = useParams();
+    const [displayName, setDisplayName] = useState("")
     console.log(profileId)
   return <>
     <Header />
