@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import "./signIn.css"
 import Input from '../../ui/input/Input';
+import Header from '../../components/header/Header';
 
 function SignIn() {
     const [name, setName] = useState("");
@@ -43,9 +44,8 @@ function SignIn() {
     ];
 
 
-
-
-  return (
+  return <>
+    <Header />
     <main className='signInApp'>
         <div className="signInContainer">
             <h1>
@@ -72,10 +72,10 @@ function SignIn() {
 
             </div>
 
-            <p className='toSignUp'>Already a memeber? <a href="#">SignIn</a> instead.</p>
+            <p className='toSignUp'>Already a memeber? <a href="/signup">SignIn</a> instead.</p>
         </div>
     </main>
-  )
+  </>
 }
 
 export default SignIn

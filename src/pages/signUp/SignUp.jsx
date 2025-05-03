@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import "./signUp.css"
 import Input from '../../ui/input/Input';
+import Header from '../../components/header/Header';
 
 function SignUp() {
     const [name, setName] = useState("");
@@ -45,11 +46,12 @@ function SignUp() {
 
 
 
-  return (
+  return <>
+    <Header />
     <main className='signUpApp'>
         <div className="signUpContainer">
             <h1>
-                Sign Up
+                Sign In
             </h1>
 
             <div className="signUpForm">
@@ -72,10 +74,10 @@ function SignUp() {
 
             </div>
 
-            <p className='toSignIn'>Already a memeber? <a href="#">SignIn</a> instead.</p>
+            <p className='toSignUp'>Don't have an account? <a href="/signin">SignUp</a> instead.</p>
         </div>
     </main>
-  )
+  </>
 }
 
 export default SignUp

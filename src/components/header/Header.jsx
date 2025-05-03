@@ -10,10 +10,10 @@ function Header({links}) {
         </div>
 
         <nav className='navHeader'>
-            <a href='#' className="navLinks">
+            <a href='/signup' className="navLinks">
                 Sign In
             </a>
-            <a href='#' className="navLinks">
+            <a href='signin' className="navLinks">
                 Sign Up
             </a>
         </nav>
