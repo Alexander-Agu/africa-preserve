@@ -45,7 +45,7 @@ function Submit() {
       try{
         let res = await savePost({
           title: title,
-          language: language,
+          tribe: language,
           content: story,
           region: location
         })

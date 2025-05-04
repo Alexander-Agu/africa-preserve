@@ -15,10 +15,13 @@ function Feed() {
         const res = await getPosts();
         setData(res);
         console.log(res)
+        
+        if (res) setIsLoading(false);
       } catch (error) {
         console.error(error);
       } finally {
-        setIsLoading(false);
+        console.log("ghkjnmb")
+        
       }
     };
 

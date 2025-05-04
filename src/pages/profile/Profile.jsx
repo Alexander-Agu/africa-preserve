@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./profile.css"
 import Header from '../../components/header/Header'
 import { useParams } from 'react-router-dom';
