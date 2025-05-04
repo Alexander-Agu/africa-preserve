@@ -12,13 +12,13 @@ function SignUp() {
     const inputs = [
         {
             title: "Story Tile",
-            placeHolder: "Email",
+            placeHolder: "Username",
             setter: setEmail,
             value: email
         },
         {
             title: "Password",
-            placeHolder: "Create password",
+            placeHolder: "Enter password",
             setter: setPassword,
             value: password
         },
@@ -67,7 +67,7 @@ function SignUp() {
                 }
 
                 <button onClick={()=> signIn()}>
-                    Sign Up
+                    Sign In
                 </button>
 
             </div>
