@@ -50,6 +50,10 @@ function Submit() {
           content: story,
           region: location
         })
+
+        if (res === true) window.location.href = "/useres/1";
+        else if(res === false) window.location.href = "useres/2";
+        
       } catch (error){
         console.log(error)
       }

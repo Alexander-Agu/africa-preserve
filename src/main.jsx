@@ -8,6 +8,7 @@ import SignUp from './pages/signUp/SignUp'
 import SignIn from './pages/signIn/SignIn'
 import Profile from './pages/profile/Profile'
 import About from './components/about/About'
+import UserMessage from './components/userMessage/UserMessage'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

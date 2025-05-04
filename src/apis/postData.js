@@ -22,8 +22,8 @@ export const savePost = async (data)=> {
                 'Content-Type': 'application/json'
             }
         })
-
         console.log(res.data)
+        return res.data;
     } catch (error) {
         console.log(error);
     }

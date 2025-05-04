@@ -7,6 +7,7 @@ import Feed from './pages/feed/Feed'
 import SignUp from './pages/signUp/SignUp'
 import SignIn from './pages/signIn/SignIn'
 import Profile from './pages/profile/Profile'
+import UserMessage from './components/userMessage/UserMessage'
 
 function App() {
   const router = createBrowserRouter([
@@ -33,6 +34,10 @@ function App() {
     {
       path: "/profile/:profileId",
       element: <Profile />
+    },
+    {
+      path: "/useres/:userId",
+      element: <UserMessage />
     }
   ])
 

@@ -21,7 +21,6 @@ function Feed() {
         console.error(error);
       } finally {
         console.log("ghkjnmb")
-        
       }
     };
 
