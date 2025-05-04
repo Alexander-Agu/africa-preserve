@@ -3,11 +3,11 @@ import "./feed.css"
 import FeedPost from '../../components/feedPost/FeedPost'
 import Header from '../../components/header/Header'
 import { getPosts } from '../../apis/fetchData';
+import { links } from '../../links';
 
 function Feed() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -30,7 +30,7 @@ function Feed() {
 
 
   return <>
-  <Header />
+  <Header links={links}/>
     <main className='feedApp'>
         <h1 className='feedAppTitle'>
             Preserving African culture

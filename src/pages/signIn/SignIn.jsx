@@ -3,6 +3,7 @@ import "./signIn.css"
 import Input from '../../ui/input/Input';
 import Header from '../../components/header/Header';
 import { saveUser } from '../../apis/postData';
+import { links } from '../../links';
 
 function SignIn() {
     const [name, setName] = useState("");
@@ -66,7 +67,7 @@ function SignIn() {
 
 
   return <>
-    <Header />
+    <Header links={links}/>
     <main className='signInApp'>
         <div className="signInContainer">
             <h1>

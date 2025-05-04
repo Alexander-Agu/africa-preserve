@@ -10,12 +10,16 @@ function Header({links}) {
         </div>
 
         <nav className='navHeader'>
-            <a href='/signup' className="navLinks">
-                Sign In
-            </a>
-            <a href='signin' className="navLinks">
-                Sign Up
-            </a>
+
+            {
+                links.map(x => {
+                    const {link, name} = x;
+
+                    return <a href={link} className="navLinks">
+                        {name}
+                    </a>
+                })
+            }
         </nav>
     </header>
   )

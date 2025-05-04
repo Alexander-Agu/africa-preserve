@@ -3,10 +3,12 @@ import Header from '../../components/header/Header'
 import HomeHero from '../../components/homeHero/HomeHero'
 import About from '../../components/about/About'
 import "./home.css"
+import { links } from '../../links'
 
 function Home() {
+
   return <>
-    <Header />
+    <Header links={links} />
     <HomeHero />
     <About />
 

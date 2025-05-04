@@ -6,9 +6,15 @@ import { useParams } from 'react-router-dom';
 function Profile() {
     const { profileId } = useParams();
     const [displayName, setDisplayName] = useState("")
-    console.log(profileId)
+    
+  const links = [
+    {
+      link: "/",
+      name: "Logout"
+    }
+  ]
   return <>
-    <Header />
+    <Header links={links} />
     <main className='profileApp'>
         <section className="profileHeader">
             <h1>Hey, Alexander I. Agu</h1>

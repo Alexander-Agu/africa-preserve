@@ -3,6 +3,7 @@ import "./signUp.css"
 import Input from '../../ui/input/Input';
 import Header from '../../components/header/Header';
 import { getUser } from '../../apis/fetchData';
+import { links } from '../../links';
 
 function SignUp() {
     const [email, setEmail] = useState("");
@@ -43,9 +44,8 @@ function SignUp() {
 
 
 
-
   return <>
-    <Header />
+    <Header links={links}/>
     <main className='signUpApp'>
         <div className="signUpContainer">
             <h1>

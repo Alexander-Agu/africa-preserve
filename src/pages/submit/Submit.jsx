@@ -3,6 +3,7 @@ import "./submit.css"
 import Header from '../../components/header/Header'
 import Input from '../../ui/input/Input';
 import { savePost } from '../../apis/postData';
+import { links } from '../../links';
 
 function Submit() {
   const [name, setName] = useState("");
@@ -56,7 +57,7 @@ function Submit() {
   }
 
   return <>
-    <Header />
+    <Header links={links} />
 
     <main className='submitApp'>
       <h1 className='submitIntro'>Share Your Heritage</h1>
