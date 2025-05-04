@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic&display=swap');
+
+
+/* >>>>> ABOUT APP <<<<< */
+    .aboutApp{
+        width: 100%;
+        height: 100dvh;
+
+        background-image: url("../../assets/dot.jpg");
+
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        gap: 1rem;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 0px) {
+        
+    }
+/*  */
+
+
+/* >>>>> CONS <<<<< */
+    .con1, .con2, .con3, .con4, .con4 ,.con5{
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+        color: white;
+    }
+
+    .conContainer{
+        opacity: 0;
+    }
+
+    .conContainer:hover{
+        opacity: 1;
+        background: linear-gradient(to top, black 0%, transparent 100%);
+
+        width: 100%;
+        height: 100%;
+
+        padding: 30px;
+
+        font-family: "Antic", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        transition: 300ms;
+    }
+
+
+    .con1{
+        background-image: url("../../assets/con1.jpg");
+
+        grid-column: 3 / 6;
+        grid-row: 3 / 6;
+    }
+
+    .con2{
+        background-image: url("../../assets/con2.jpeg");
+
+        grid-column: 1 / 3;
+        grid-row: 1 / 6;
+    }
+
+    .con3{
+        background-image: url("../../assets/con3.jpg");
+
+        grid-column: 3 / 8;
+        grid-row: 1 / 3;
+    }
+
+    .con4{
+        background-image: url("../../assets/con4.jpg");
+
+        grid-column: 6 / 8;
+        grid-row: 3 / 8;
+    }
+
+    .con5{
+        background-image: url("../../assets/con5.jpg");
+
+        grid-column: 1 / 6;
+        grid-row: 6 / 8
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 0px) {
+        
+    }
+/*  */
