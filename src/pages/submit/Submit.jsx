@@ -11,6 +11,7 @@ function Submit() {
   const [location, setLocation] = useState("");
   const [language, setLanguage] = useState("");
   const [story, setStory] = useState("");
+  let click = 1;
 
   const questions = [
     {
@@ -39,23 +40,25 @@ function Submit() {
     },
   ];
 
-  console.log(story)
-
   const submit = async ()=> {
-    if (title && name && location && language){
-      try{
-        let res = await savePost({
-          title: title,
-          tribe: language,
-          content: story,
-          region: location
-        })
+    if (click == 1){
+      click++;
+      if (title && name && location && language){
+        try{
+          let res = await savePost({
+            title: title,
+            tribe: language,
+            content: story,
+            region: location
+          })
 
-        if (res === true) window.location.href = "/useres/1";
-        else if(res === false) window.location.href = "useres/2";
-        
-      } catch (error){
-        console.log(error)
+          if (res === true) window.location.href = "/useres/1";
+          else if(res === false) window.location.href = "useres/2";
+          
+        } catch (error){
+          click = 0
+          console.log(error)
+        }
       }
     }
   }

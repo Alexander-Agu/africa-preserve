@@ -9,9 +9,21 @@ export const getUser = async (data)=> {
     'Content-Type': 'application/json'
   }
 })
-    return res.data
+    console.log(res.data.user)
+    return res.data.user.id
     } catch (error){
         console.log(error)
+    }
+}
+
+
+export const getUserById = async (id) => {
+    try{
+        let res = await axios.get(`http://127.0.0.1:5000/api/users/${id}`);
+        console.log(res.data)
+        return res.data
+    } catch (error){
+        console.log(error);
     }
 }
 

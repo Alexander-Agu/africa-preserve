@@ -8,8 +8,8 @@ export const saveUser = async (data)=>{
                 'Content-Type': 'application/json'
             }
         })
-        console.log(res.data)
-        return res.data;
+        console.log(res.user)
+        return res.data.user.id;
     } catch(error){
         console.log(error)
     }

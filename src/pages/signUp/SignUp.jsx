@@ -32,7 +32,7 @@ function SignUp() {
                     password: password
                 })
 
-                window.location.href = `profile/${user.user.id}`;
+                window.location.href = `profile/${user}`;
             } catch(error){
                 console.log(error);
             }

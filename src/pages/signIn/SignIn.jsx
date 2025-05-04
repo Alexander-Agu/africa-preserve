@@ -47,19 +47,24 @@ function SignIn() {
 
     const signUp = async ()=> {
         if (name && email && location && password && confirm) {
+            if (password === confirm){
+                try{
+                    let id = await saveUser({
+                        username: name,
+                        email: email,
+                        password: password
+                    })
 
-            try{
-                let id = await saveUser({
-                    username: name,
-                    email: email,
-                    password: password
-                })
+                    // console.log(id)
 
-                window.location.href = `profile/${id.user.id}`; 
-            } catch (error){
-                console.log(error)
+                    window.location.href = `profile/${id}`; 
+                }catch (error){
+                    window.location.href = "signup"
+                }
+            } else{
+                alert("Password mu be the same")
+                setConfirm("");
             }
-            // Redirect to another page
         } else {
             alert("Please fill in all fields.");
         }

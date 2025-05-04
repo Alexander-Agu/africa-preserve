@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./profile.css"
 import Header from '../../components/header/Header'
 import { useParams } from 'react-router-dom';
+import { getUserById } from '../../apis/fetchData';
 
 function Profile() {
     const { profileId } = useParams();
+    console.log(profileId)
+    const [data, setData] = useState([]);
     const [displayName, setDisplayName] = useState("")
     
   const links = [
@@ -13,11 +16,25 @@ function Profile() {
       name: "Logout"
     }
   ]
+
+useEffect(() => {
+  const fetchUser = async () => {
+    try {
+      const res = await getUserById(profileId);
+      setData(res);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  fetchUser();
+}, [profileId]);
+
   return <>
     <Header links={links} />
     <main className='profileApp'>
         <section className="profileHeader">
-            <h1>Hey, Alexander I. Agu</h1>
+            <h1>Hey, {data.username}</h1>
             <h2>Welcome to your Africa preserve Profile</h2>
 
             <div className="profileMessage">
